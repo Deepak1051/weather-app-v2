@@ -1,0 +1,224 @@
+@import url(https://fonts.googleapis.com/css?family=Roboto:400,300);
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html,
+body {
+    background-color: #F3F3F3;
+    
+    /* background: linear-gradient(to left, #283593, #1976d2); */
+    /* background: url(https://source.unsplash.com/random); */
+      
+    font-family: 'Roboto', sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    width:100vw;
+    overflow-y: hidden;
+    overflow-x: hidden;
+}
+.random-img{
+    position: absolute;
+    height:100vh;
+    width:100vw;
+}
+.random-img img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+.temp-img-container{
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+.temp-img-container img{
+  
+}
+.card {
+    /* margin: 0 auto;
+    margin-top: 5%;
+    padding: 5px 30px;
+    width: 290px;
+    height: 470px;
+    border-radius: 3px;
+    background-color: #fff;
+    box-shadow: 1px 2px 10px rgba(0, 0, 0, .2); */
+
+    position: relative;
+  height: 300px;
+  width: 350px;
+  border-radius: 25px;
+  background: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(10px);  /* This will produce the blur */
+  border: 2px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 0 80px rgba(0, 0, 0, 0.2);
+  overflow: hidden;
+  z-index: 100;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+    
+}
+.input-container{
+    text-align: center;
+}
+.location{
+    font-size: 20px;
+    font-weight:400 ;
+    text-align: center;
+    /* background-color: blue; */
+    height:60px;
+}
+.temp{
+    text-align: center;
+}
+
+.wind{
+    display: flex;
+    justify-content: space-around;
+}
+
+/* .temp{
+    display: flex;
+    justify-content: space-around;
+} */
+
+
+
+
+
+ .circle {
+    position: absolute;
+    /* border-radius: 50%;
+    background: radial-gradient(#006db3, #29b6f6); */
+  }
+.circles {
+    position: absolute;
+    height: 270px;
+    width: 450px;
+    top: 40%;
+    left: 50%;
+    /* transform: translate(-50%, -50%); */
+    animation: mymove 10s infinite alternate linear;
+}
+.circle-1 {
+    height: 300px;
+    width: 300px;
+    top: -100px;
+    left: -100px;
+    opacity: .8;
+  }
+.circle-2 {
+    height: 250px;
+    width: 250px;
+    bottom: -90px;
+    right: -90px;
+    opacity: 0.8;
+    /* animation: rec 25s linear alternate infinite; */
+  } 
+
+.input{
+    margin-left: 20px;
+    border-radius: 10px;
+    border: none;
+    padding: 10px;
+    margin-top: 20px;
+    margin-right: 20px;
+    outline-color: #FF0066;
+    /* font-size: 16.6px; */
+}
+button{
+    background-color: #FF0066;
+    border: none;
+    padding:  10px;
+    border-radius: 10px;
+    font-size: bold;
+    color:white;
+}
+.magic{
+    display: block;
+    /* text-align: center; */
+    margin: 0 auto;
+    padding:10px 15px;
+    background-color: black;
+}
+
+/* @keyframes mymove {
+    
+        0%   { left:0px}
+        25%  {top: 200px;}
+        50%  {top: 300px;}
+        75%  {top: 200px;}
+        100% {right: 0px;}
+      
+} */
+
+
+/* @keyframes rec {
+    to {
+      transform: translate(100vw, -50vh);
+    }
+} */
+
+@media (min-width: 576px) {
+
+  
+ }
+/*
+body {
+ margin: 0;
+ height: 100vh;
+ overflow: hidden;
+}
+
+.loading_cont {
+ width: 100%;
+ height: 100%;
+ background: red;
+ background: -webkit-linear-gradient(left top, #152a8e, #b1376c);
+ background: -o-linear-gradient(bottom right, #152a8e, #b1376c);
+ background: -moz-linear-gradient(bottom right, #152a8e, #b1376c);
+ background: linear-gradient(to bottom right, #152a8e, #b1376c);
+}
+
+.loading_cont:before {
+ content: "";
+ position: absolute;
+ width: 100%;
+ height: 100%;
+ left: 0;
+ top: 0px;
+ background: url(https://next.atcom.gr/StaticData/Landing2017/Content/Media/dots-transparent.png) repeat scroll center center;
+ opacity: 0.05;
+ z-index: 0;
+}
+
+#loader {
+  display: inline-block;
+  position: relative;
+  width: 800px;
+  height: 800px;
+  top: 50%;
+  left: 50%;
+  margin-left: -400px;
+  margin-top: -400px;
+}
+
+rect {
+ -webkit-transform-origin: 50% 50%;
+ transform-origin: 50% 50%;
+}
+
+.blobs {
+ -webkit-filter: url("#goo");
+ filter: url("#goo");
+}
+
+.blob {
+  fill: white;
+}
